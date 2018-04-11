@@ -1,17 +1,10 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="pt-br">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="../../css/app.css" rel="stylesheet">
-    <title>Pesquisar</title>
-</head>
-<body>
-<div class="container">
-    <h1 class="mt-2">Pesquisa de Clientes</h1>
+<?php
+   $titulo = 'Pesquisar';
+?>
+ @extends('cliente.cabecalho')
+ @section('conteudo')
 
+    <h1 class="mt-2">Pesquisa de Clientes </h1>
 
     @if(!empty($mensagem))
         <div class="alert alert-success mt-2">{{ $mensagem }}</div>
@@ -56,11 +49,8 @@
             @endforeach
         </table>
     @endif
+@stop
 
 
 
 
-
-</div>
-</body>
-</html>

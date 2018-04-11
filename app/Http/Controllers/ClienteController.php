@@ -70,7 +70,7 @@ class ClienteController extends Controller
         $c = Cliente::find($id);
 
         $c->nomeAquicultor = Input::get('nomeAquicultor');
-        $c->atividade = Input::get('quantidade');
+        $c->atividade = Input::get('atividade');
         $c->CPF = Input::get('CPF');
         $c->rg = Input::get('rg');
         $c->naturalidade = Input::get('naturalidade');

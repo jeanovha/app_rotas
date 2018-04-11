@@ -15,16 +15,16 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/clientes/pesquisar', 'ClienteController@pesquisar');
-Route::post('/clientes/pesquisar', 'ClienteController@pesquisar');
+Route::get('/clientes/pesquisar', 'ClienteController@pesquisar')->middleware('auth');
+Route::post('/clientes/pesquisar', 'ClienteController@pesquisar')->middleware('auth');
 
-Route::get('/clientes/inserir', 'ClienteController@mostrar_inserir');
-Route::post('/clientes/inserir', 'ClienteController@inserir');
+Route::get('/clientes/inserir', 'ClienteController@mostrar_inserir')->middleware('auth');
+Route::post('/clientes/inserir', 'ClienteController@inserir')->middleware('auth');
 
-Route::get('/clientes/alterar/{id}', 'ClienteController@mostrar_alterar');
-Route::post('/clientes/alterar', 'ClienteController@alterar');
+Route::get('/clientes/alterar/{id}', 'ClienteController@mostrar_alterar')->middleware('auth');
+Route::post('/clientes/alterar', 'ClienteController@alterar')->middleware('auth');
 
-Route::get('/clientes/excluir/{id}', 'ClienteController@excluir');
+Route::get('/clientes/excluir/{id}', 'ClienteController@excluir')->middleware('auth');
 
 Auth::routes();
 
